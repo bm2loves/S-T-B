@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>welcome home</title>
+	<link rel="stylesheet" type="text/css" href="newhomebin.css">
+</head>
+<body>
+	<div class=container>
+	<h1>
+		<span>S</span>
+		<span>M</span>
+		<span>A</span>
+		
+		<span>R</span>
+		<span>T</span>
+		<span>B</span>
+		<span>I</span>
+		<span>N</span>
+	</h1>
+	<div class="nav">
+		<ul class="menu">
+			<li><a href="#">Admin</a>
+				<ul class="sub-menu">
+					<li><a href="stblogin1rg.html">Login</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Maintenance</a></li>
+			<li><a href="#">About us</a></li>
+			<li><a href="#">Advertisements</a></li>
+		</ul>
+	</div>
+	<br><br>
+	<br><br>
+	<div id="container1">
+<img class="slides" src="smartbin/Slide1.JPG"/>
+<img class="slides" src="smartbin/Slide2.JPG"/>
+<img class="slides" src="smartbin/Slide3.JPG"/>
+<img class="slides" src="smartbin/Slide4.JPG"/>
+<img class="slides" src="smartbin/Slide5.JPG"/>
+<img class="slides" src="smartbin/Slide6.JPG"/>
+<img class="slides" src="smartbin/Slide7.JPG"/>
+<img class="slides" src="smartbin/Slide8.JPG"/>
+<img class="slides" src="smartbin/Slide9.JPG"/>
+<img class="slides" src="smartbin/Slide10.JPG"/>
+<img class="slides" src="smartbin/Slide11.JPG"/>
+<img class="slides" src="smartbin/Slide12.JPG"/>
+<img class="slides" src="smartbin/Slide13.JPG"/>
+<img class="slides" src="smartbin/Slide14.JPG"/>
+<img class="slides" src="smartbin/Slide15.JPG"/>
+<img class="slides" src="smartbin/Slide16.JPG"/>
+<img class="slides" src="smartbin/Slide17.JPG"/>
+<img class="slides" src="smartbin/Slide18.JPG"/>
+<img class="slides" src="smartbin/Slide18.JPG"/>
+<img class="slides" src="smartbin/Slide19.JPG"/>
+<img class="slides" src="smartbin/Slide20.JPG"/>
+<img class="slides" src="smartbin/Slide21.JPG"/>
+<img class="slides" src="smartbin/Slide22.JPG"/>
+<img class="slides" src="smartbin/Slide23.JPG"/>
+<button class="btn" onclick="plusIndex(-1)" id="btn1">&#10094;</button>
+<button class="btn" onclick="plusIndex(1)" id="btn2">&#10095;</button>
+
+</div>
+</div>
+</body>
+<script>
+	var index = 1;
+    function plusIndex(n){
+        index = index + n;
+        showImage(index);
+   }
+    showImage(1);
+    function showImage(n){
+        var i;
+        var x = document.getElementsByClassName("slides");
+        if(n > x.length){ index = 1};
+        if(n < 1){ index = x.length};
+        for(i=0;i<x.length;i++)
+        {
+            x[i].style.display = "none";
+        }
+            x[index-1].style.display = "block";
+        }
+
+        autoSlide();
+        function autoSlide(){
+        	var i;
+        var x = document.getElementsByClassName("slides");
+      
+        for(i=0;i<x.length;i++)
+        {
+        	x[i].style.display = "none";
+        }
+         
+         if(index > x.length){ index = 1}
+         x[index-1].style.display = "block";
+         index++;
+         
+     }
+    
+</script>
+<div class="myname">
+<p><font size="4">&copy;Design by KAMRAN ALAM</font></p>
+</div>
+</div>
+</body>
+</html>

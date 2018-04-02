@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>welcome home</title>
+	<link rel="stylesheet" type="text/css" href="fstb.css">
+</head>
+<body>
+	<div class=container>
+	<h1>
+		<span>S</span>
+		<span>M</span>
+		<span>A</span>
+		<span>R</span>
+		<span>T</span>
+		<span>B</span>
+		<span>I</span>
+		<span>N</span>
+	</h1>
+	<br><br>
+	<br><br>
+	<br><br>
+<div class="texts-container">
+<h2>Find me where i am!</h2>
+</div>
+<br><br>
+<div class="main">
+<form>
+<input type ="text" name ="name" placeholder ="Search.." id='checkme'>
+<span id="findme"></span>
+</form>
+</div>
+<div class="myname">
+<p><font size="4">&copy;Design by KAMRAN ALAM</font></p>
+</div>
+</div>
+</body>
+<script>  
+var request=new XMLHttpRequest();  
+function searchresult(){  
+var TBnum=document.getElementById('checkme').value;  
+var url="fstb.jsp?val="+TBnum;  
+  
+try{  
+request.onreadystatechange=function(){  
+if(request.readyState==4){  
+var val=request.responseText;  
+document.getElementById('findme').innerHTML=val;  
+}  
+}//end of function  
+request.open("GET",url,true);  
+request.send();  
+}catch(e){alert("Unable to connect to server");}  
+}  
+</script>  
+</html>
